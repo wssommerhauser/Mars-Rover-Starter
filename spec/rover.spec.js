@@ -62,8 +62,7 @@ const Command = require('../command.js');
       let message = new Message('Test message with two commands', commands);
       let rover = new Rover(98382); 
       let response = rover.receiveMessage(message);
-      //expect(rover.position).toBe(commands[0].value);
-      expect(response.rover.positionn).toBe(commands[0].value);
+      expect(response.position).toBe(commands.value);
     });
 
 });
