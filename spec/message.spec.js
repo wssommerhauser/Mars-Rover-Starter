@@ -10,10 +10,10 @@ describe("Message class", function() {
       });
       it("constructor sets name", function() {
         let message = new Message("coolConstructorName");
-        expect(typeof(message.name) === "string");
+        expect(typeof(message.name)).toBe("string");
       });
       it("contains a commands array passed into the constructor as the 2nd argument", function() {
         let message = new Message("coolConstructorName", [new Command("ALERT!", 1234), new Command("No Alert", 1345)]);
-        expect(typeof(message.commands)) === "array";
+        expect(typeof(message.commands)).toBe("object");
       });
 });

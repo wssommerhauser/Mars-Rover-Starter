@@ -10,16 +10,13 @@ describe("Command class", function() {
   });
 
   it("constructor sets command type", function() {
-    //create a new Command(); with inputs
-    // Command.commandType = "ALERT";
-    // expect(typeof(Command.commandType)).toEqual("string");
     let command = new Command("ALERT!");
-    expect(typeof(command.commandType) === "string");
+    expect(typeof(command.commandType)).toBe("string");
   });
 
   it("constructor sets a value passed in as the 2nd argument", function() {
-    let value = new Command("ALERT!",);
-    expect(typeof(value.commandType) === "number");
+    let command = new Command("ALERT!", 123);
+    expect(typeof(command.value)).toBe("number");
   });
 
 });
