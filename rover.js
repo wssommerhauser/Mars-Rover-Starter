@@ -33,8 +33,9 @@ class Rover {
       else{
           object.results.push({completed: false});
        }
-      return object;
+      
    }
+   return object;
 }
 }
 
