@@ -57,12 +57,13 @@ const Command = require('../command.js');
       expect(response.results[1].completed).toBe(false);
     });
 
-    it("responds correctly to the mode change command", function() {
+    it("responds with the position for the move command", function() {
       let commands = [new Command('MOVE', 1234)];
       let message = new Message('Test message with two commands', commands);
       let rover = new Rover(98382); 
       let response = rover.receiveMessage(message);
-      expect(rover.position).toBe(commands[0].value);
+      //expect(rover.position).toBe(commands[0].value);
+      expect(response.rover.positionn).toBe(commands[0].value);
     });
 
 });
