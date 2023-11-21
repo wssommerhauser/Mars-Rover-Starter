@@ -13,7 +13,7 @@ class Rover {
 
       for (let i = 0; i < message.commands.length; i++){
          if (message.commands[i].commandType === "MOVE"){
-            if(this.mode = "LOW_POWER"){
+            if(this.mode === "LOW_POWER"){
                object.results.push({completed: false});
             }else{
                object.results.push({completed: true});
